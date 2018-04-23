@@ -1,0 +1,31 @@
+{
+  "name": "state-event-emitter",
+  "description": "ES6 event emitter to communicate state between application components",
+  "keywords": "Event Emitter, State Management, Application Communication",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": "github:joechapan/state-event-emitter",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.19.1",
+    "husky": "^0.14.3",
+    "jest": "^22.4.3",
+    "jest-matcher-called-on": "^1.0.1"
+  },
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint .",
+    "build": "babel src -o index.js",
+    "precommit": "npm run test && npm run lint",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.3"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/config/custom-matchers.js"
+  }
+}
