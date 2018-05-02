@@ -2,7 +2,7 @@
   "name": "state-event-emitter",
   "description": "ES6 event emitter to communicate state between application components",
   "keywords": "Event Emitter, State Management, Application Communication",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "license": "MIT",
   "main": "index.js",
   "repository": "github:joechapan/state-event-emitter",
