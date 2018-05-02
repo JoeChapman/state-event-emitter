@@ -34,7 +34,6 @@ export default class StateEventEmitter {
   emit(ev, state, ctx) {
     let names;
     [ev, ...names] = ev.split(':');
-    this.load(state);
 
     if (this.events[ev] && this.events[ev].length) {
       this.events[ev].forEach(cb => {
@@ -44,7 +43,7 @@ export default class StateEventEmitter {
           }
           return a;
         }, {});
-        subState = Object.keys(subState).length ? subState : this.state;
+        subState = Object.keys(subState).length ? subState : state;
         cb.call(ctx, subState);
       });
     }
