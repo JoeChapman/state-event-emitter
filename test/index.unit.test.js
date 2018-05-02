@@ -83,7 +83,7 @@ describe('StateEventEmitter', () => {
       expect(listener1).toHaveBeenCalledTimes(1);
       expect(listener2).toHaveBeenCalledTimes(1);
     });
-    test('passes the state to the listener', () => {
+    test('passes the data to the listener', () => {
       const data = {foo: 'bar'};
       emitter.on('a', listener1);
       emitter.on('a', listener2);
@@ -91,7 +91,7 @@ describe('StateEventEmitter', () => {
       expect(listener1).toHaveBeenCalledWith(data);
       expect(listener2).toHaveBeenCalledWith(data);
     });
-    test('the state passed to the listener can be subset', () => {
+    test('the data passed to the listener can be subset', () => {
       const data = {foo: 'bar'};
       const expected = {bar: 'foo', baz: 'whats'};
       emitter.load({foo: 'baz', bar: 'foo', baz: 'whats'});
@@ -126,9 +126,8 @@ describe('StateEventEmitter', () => {
       const updated = {a: 0, b: {c: [1, {d: 5}]}};
       const expected = {a: 0, b: {c: [1, {d: 5}]}, c: {d: 4}};
       emitter.load(data);
-      emitter.on('a', listener);
-      emitter.emit('a', updated);
-      expect(listener).toHaveBeenCalledWith(expected);
+      emitter.load(updated);
+      expect(emitter.state).toEqual(expected);
     });
   });
 });
