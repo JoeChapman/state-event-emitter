@@ -9,9 +9,9 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "eslint": "^4.19.1",
+    "eslint": "^5.5.0",
     "husky": "^0.14.3",
-    "jest": "^22.4.3",
+    "jest": "^23.5.0",
     "jest-matcher-called-on": "^1.0.1"
   },
   "scripts": {
@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "babel-core": "^6.26.0",
-    "babel-jest": "^22.4.3"
+    "babel-jest": "^23.4.2"
   },
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>/config/custom-matchers.js"
