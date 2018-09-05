@@ -1,4 +1,7 @@
 # state-event-emitter
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/JoeChapman/state-event-emitter.svg)](https://greenkeeper.io/)
+
 ES6 event emitter to communicate state between application components
 
 ## Use case
